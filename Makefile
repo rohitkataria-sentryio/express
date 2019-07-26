@@ -13,3 +13,6 @@ create_release:
 
 associate_commits:
 	sentry-cli releases -o $(SENTRY_ORG) -p $(SENTRY_PROJECT) set-commits --auto $(VERSION)
+
+deploy_heroku:
+	heroku create && git push heroku master
