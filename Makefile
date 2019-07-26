@@ -3,7 +3,7 @@
 #  SENTRY_AUTH_TOKEN
 
 SENTRY_ORG=testorg-az
-SENTRY_PROJECT=express-demo
+SENTRY_PROJECT=hardware-store-express
 VERSION=`sentry-cli releases propose-version`
 
 setup_release: create_release associate_commits
