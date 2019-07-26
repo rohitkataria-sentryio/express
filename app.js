@@ -5,7 +5,7 @@ var app = express();
 
 // Initalize Sentry (import library and instantiate)
 const Sentry = require('@sentry/node');
-Sentry.init({ dsn: 'https://276b9c69b15b41a3ae98d07206889b24@sentry.io/1366275'});
+Sentry.init({ dsn: 'https://232d142aa8d44f15a7e80c982862fb57@sentry.io/1514679'});
 
 let Inventory = {
     wrench: 0,
@@ -92,6 +92,6 @@ app.get('/handled', function (req, res) {
 // The error handler must be before any other error middleware
 app.use(Sentry.Handlers.errorHandler());
 
-app.listen(3001, function () {
+app.listen(process.env.PORT || 3001, function () {
     console.log('CORS-enabled web server listening on port 3001');
 });
